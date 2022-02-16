@@ -25,7 +25,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import {print1to9} from "react-native-tds";
+import {formatALine} from "formatter_lib";
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -54,7 +54,7 @@ const Section = ({children, title}): Node => {
 };
 
 const App: () => Node = () => {
-  print1to9()
+  formatALine('hello');
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
